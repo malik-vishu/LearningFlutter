@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: AllRoutes.loginRoute,
+      initialRoute: AllRoutes.homeRoute,
       routes: {
         "/": (context) => const LoginPage(),
         AllRoutes.homeRoute: (context) => const FirstPage(),
