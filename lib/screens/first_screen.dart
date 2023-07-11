@@ -1,12 +1,32 @@
 import 'package:first_app/models/catalog.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../widgets/drawer.dart';
 import '../widgets/item_widget.dart';
+import 'dart:convert';
 
-class FirstPage extends StatelessWidget {
+class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
 
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() async{
+    final jsonData = await rootBundle.loadString("assets/files/catalog.json");
+    final decodedData = jsonDecode(jsonData);
+    var productsData = decodedData["products"];
+    print(productsData);
+  }
   @override
   Widget build(context) {
     //final dummyList = List.generate(5,(index)=>CatalogModel.productList[0]);
