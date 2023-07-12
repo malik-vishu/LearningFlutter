@@ -2,4 +2,6 @@
 
 A new Flutter project.
 
-Learning from Codepur. #30DaysOfFlutter
+## Getting Started
+
+Learning from Codepur. #30DayOfFlutter
