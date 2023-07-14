@@ -8,7 +8,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      "Catalog App".text.xl5.bold.color(AllThemes.darkBluishColor).make(),
+      "Catalog App".text.xl5.bold.color(context.theme.scaffoldBackgroundColor).make(),
       "Trending".text.xl2.make()
     ]);
   }

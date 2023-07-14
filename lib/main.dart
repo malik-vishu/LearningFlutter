@@ -14,10 +14,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: AllThemes.lightTheme(context),
       darkTheme: AllThemes.darkTheme(context),
-      initialRoute: AllRoutes.homeRoute,
+      initialRoute: AllRoutes.loginRoute,
       routes: {
         "/": (context) => const LoginPage(),
         AllRoutes.homeRoute: (context) => const FirstPage(),

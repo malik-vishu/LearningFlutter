@@ -3,6 +3,7 @@ import 'package:first_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../utils/all_routes.dart';
 import '../widgets/home_widgets/catalog_list.dart';
 import '../widgets/home_widgets/header.dart';
 import 'dart:convert';
@@ -38,7 +39,15 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(context) {
     return Scaffold(
-      backgroundColor: AllThemes.creamColor,
+      backgroundColor: context.canvasColor,
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context, AllRoutes.cartRoute),
+          backgroundColor: ThemeMode.system == ThemeMode.light?AllThemes.darkBluishColor:AllThemes.lightBluishColor,
+          child: const Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+          ),
+        ),
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
