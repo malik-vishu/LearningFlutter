@@ -20,10 +20,10 @@ class AllThemes {
           iconTheme: IconThemeData(color: Colors.black),
           //textTheme: Theme.of(context).textTheme,
         ),
-        textTheme: Theme.of(context).textTheme.copyWith(
-              titleLarge:
-                  context.textTheme.titleLarge!.copyWith(color: Colors.white),
-            ),
+        // textTheme: Theme.of(context).textTheme.copyWith(
+        //       titleLarge:
+        //           context.textTheme.titleLarge!.copyWith(color: Colors.white),
+        //     ),
       );
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
@@ -43,10 +43,10 @@ class AllThemes {
           iconTheme: IconThemeData(color: Colors.white),
           //textTheme: Theme.of(context).textTheme,
         ),
-        textTheme: Theme.of(context).textTheme.copyWith(
-              titleLarge:
-                  context.textTheme.titleLarge!.copyWith(color: Colors.white),
-            ),
+        // textTheme: Theme.of(context).textTheme.copyWith(
+        //       titleLarge:
+        //           context.textTheme.titleLarge!.copyWith(color: Colors.white),
+        //     ),
       );
 
   //Colors
