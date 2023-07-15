@@ -15,7 +15,8 @@ class CatalogList extends StatelessWidget {
         shrinkWrap: true,
         itemCount: CatalogModel.productList!.length,
         itemBuilder: (context, index) {
-          final catalog = CatalogModel.productList![index];
+          //final catalog = CatalogModel.productList![index];
+          final catalog = CatalogModel.getByPosition(index);
           return InkWell(
             onTap: () => Navigator.push(
                 context,
@@ -54,10 +55,10 @@ class CatalogItem extends StatelessWidget {
               ElevatedButton(
                   onPressed: () {},
                   style: const ButtonStyle(
-                      shape: MaterialStatePropertyAll(StadiumBorder()),
-                      // backgroundColor:
-                      //     context.theme.elevatedButtonTheme
-                          ),
+                    shape: MaterialStatePropertyAll(StadiumBorder()),
+                    // backgroundColor:
+                    //     context.theme.elevatedButtonTheme
+                  ),
                   child: "Buy".text.make()),
             ],
           ).pOnly(right: 8.0)
